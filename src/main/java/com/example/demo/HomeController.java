@@ -7,9 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
+//    @GetMapping("/")
+//    public String home(ModelMap modelMap){
+//        modelMap.put("a" , 20);
+//        return "home";
+//    }
+
     @GetMapping("/")
-    public String home(ModelMap modelMap){
-        modelMap.put("a" , 20);
-        return "home";
+    public String getForm(){
+        return "weather";
     }
 }
