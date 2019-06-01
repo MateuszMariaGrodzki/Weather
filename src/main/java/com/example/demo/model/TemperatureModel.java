@@ -14,5 +14,12 @@ public class TemperatureModel {
     @JsonProperty("pressure")
     private Integer pressure;
 
+    public double getTemperatureInCelsjusz(){
+        return temp - 273.15;
+    }
+
+    public String getTemperatureDescription(){
+        return String.format("%.2f" , getTemperatureInCelsjusz());
+    }
 
 }
